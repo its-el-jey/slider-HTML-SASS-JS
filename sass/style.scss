@@ -17,88 +17,173 @@ body {
   justify-items: center;
   position: relative;
   text-align: center;
+  height: 100vh;
 }
 
-// header
-.header {
+// slider container
+.slider {
   padding: 2rem;
   margin-top: 2rem;
   max-width: 450px;
-  display: grid;
-  justify-items: center;
-  align-items: center;
+  position: relative;
 
-  .top {
-    position: relative;
-    .patternBg{
-      width: 470px;
-      height: 425px;
-      position: absolute;
-      top: -40px;
-      left: -70px;
-      z-index: -1000;
-    }
-    .gallery {
-      width: 350px;
-      margin: 0 auto;
+  .slide {
+    .user {
+      position: relative;
+      display: grid;
+      justify-items: center;
+      align-items: center;
 
-      img {
-        width: 100%;
-        border-radius: 0.5rem;
+      .patternBg{
+        width: 400px;
+        height: 370px;
+        position: absolute;
+        top: -35px;
+        left: -50px;
+        z-index: -1000;
+      }
+      .image {
+        width: 300px;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          border-radius: 0.5rem;
+        }
       }
     }
-    .slider {
-      width: 125px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      background: white;
-      padding: 1rem 0;
-      border-radius: 2rem;
-      box-shadow: 3px 10px 6px -6px #777;
-      position: absolute;
-      bottom: -20px;
-      right: 35%;
+
+    .testimonial {
+      position: relative;
+      margin-top: 10rem;
+
+      .quotesBg {
+        position: absolute;
+        top: -70px;
+        right: 35%;
+        z-index: -1000;
+      }
+      h1 {
+        font-weight: 300;
+        color: $dark-blue;
+        margin-top: -0.5rem;
+      }
+      .name {
+        font-weight: 700;
+        color: $dark-blue;
+      }
+      .profession {
+        font-weight: 500;
+        color: $grayish-blue;
+      }
     }
   }
 
-  .bottom {
-    position: relative;
-    margin-top: 10rem;
-
-    .quotesBg {
-      position: absolute;
-      top: -70px;
-      right: 35%;
-      z-index: -1000;
-    }
-    h1 {
-      font-weight: 300;
-      color: $dark-blue;
-      margin-top: -0.5rem;
-    }
-    .name {
-      font-weight: 700;
-      color: $dark-blue;
-    }
-    .profession {
-      font-weight: 500;
-      color: $grayish-blue;
-    }
-  }
-  .curveBg {
-    width: 100%;
+  .button {
+    width: 125px;
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 3px 10px 6px -6px #777;
+    background: white;
     position: absolute;
-    bottom: -100px;
-    left: 0;
-    z-index: -1000;
+    top: 300px;
+    right: 33%;
+    z-index: 1000;
+
+    :hover{
+      background: $grayish-blue;
+    }
+    .btn {
+      cursor: pointer;
+      width: 50%;
+      padding: 1rem 0;
+    }
+    .next {
+      border-radius: 0 2rem 2rem 0;
+    }
+    .prev {
+      border-radius: 2rem 0 0 2rem;
+    }
   }
+  
+}
+.curveBg {
+  width: 100%;
+  position: absolute;
+  bottom: -400px;
+  left: 0;
+  z-index: -1000;
 }
 .attribution { 
   position: absolute;
-  bottom: -100px;
+  bottom: -400px;
   font-size: 11px; 
   text-align: center; 
   a {
     color: hsl(228, 45%, 44%); 
+  }
+}
+
+
+// media query
+@media screen  and (min-width: 500px){
+  .slider{
+    .slide {
+      .user {
+        .patternBg {
+          width: 440px;
+          height: 370px;
+          position: absolute;
+          top: -35px;
+          left: -50px;
+          z-index: -1000;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+
+  .slider {
+    max-width: 900px;
+    .slide {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .user {
+        order: 2;
+        .patternBg {
+          width: 530px;
+          height: 485px;
+          top: -45px;
+          left: -60px;
+        }
+        .image {
+          width: 400px;
+        }
+      }
+      .testimonial {
+        text-align: left;
+        margin-top: 8rem;
+        .quotesBg {
+          left: 60px;
+        }
+        h1 {
+          margin-right: -4rem;
+        }
+      }
+    }
+
+    .button {
+      top: 400px;
+      right: 250px;
+    }
+  }
+  .curveBg {
+    bottom: 0px;
+    max-width: 50%;
+  }
+  .attribution {
+    bottom: 0;
   }
 }
