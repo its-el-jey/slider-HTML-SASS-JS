@@ -148,7 +148,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .slider {
-    max-width: 900px;
+    max-width: 1050px;
   }
   .slider .slide {
     display: -ms-grid;
@@ -162,13 +162,13 @@ body {
             order: 2;
   }
   .slider .slide .user .patternBg {
-    width: 530px;
-    height: 485px;
-    top: -45px;
+    width: 600px;
+    height: 540px;
+    top: -50px;
     left: -60px;
   }
   .slider .slide .user .image {
-    width: 400px;
+    width: 450px;
   }
   .slider .slide .testimonial {
     text-align: left;
@@ -178,7 +178,8 @@ body {
     left: 60px;
   }
   .slider .slide .testimonial h1 {
-    margin-right: -4rem;
+    margin-right: -10rem;
+    font-size: 2rem;
   }
   .slider .button {
     top: 400px;

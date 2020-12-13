@@ -145,7 +145,7 @@ body {
 @media screen and (min-width: 768px){
 
   .slider {
-    max-width: 900px;
+    max-width: 1050px;
     .slide {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -153,13 +153,13 @@ body {
       .user {
         order: 2;
         .patternBg {
-          width: 530px;
-          height: 485px;
-          top: -45px;
+          width: 600px;
+          height: 540px;
+          top: -50px;
           left: -60px;
         }
         .image {
-          width: 400px;
+          width: 450px
         }
       }
       .testimonial {
@@ -169,7 +169,8 @@ body {
           left: 60px;
         }
         h1 {
-          margin-right: -4rem;
+          margin-right: -10rem;
+          font-size: 2rem;
         }
       }
     }
